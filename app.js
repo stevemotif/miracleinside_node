@@ -1,11 +1,7 @@
 const express = require("express");
-
-
 const app =  express();
 app.use(express.json());
-
 const mysql = require("mysql2");
-
 
 const connection = mysql.createConnection({
     host:'localhost',
@@ -23,7 +19,7 @@ connection.connect((error) => {
 });
 
 app.get('/',(req,res)=>{
-    res.send("Hi");
+    res.send("Welcome to Miralce Inside Admin Backend");
 })
 
 // app.post("/users", async (req, res) => {
